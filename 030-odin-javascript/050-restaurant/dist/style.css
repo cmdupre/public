@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Inter:wght@300&display=swap');
+
+body {
+    background-color: slategray;
+    font-family: "Comic Neue";
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+
+#content {
+    width: max(60vw, 325px);
+    margin: auto;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 0 0 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    gap: 2%;
+}
+
+.logo-image {
+    width: 100px;
+}
+
+.logo-text {
+    font-size: 3.5rem;
+    line-height: 1.1em;
+    color: steelblue;
+}
+
+.copy-text {
+    padding: 2%;
+}
+
+.credit {
+    margin-top: 10%;
+    font-size: 0.65rem;
+}
+
+.credit-link {
+    text-decoration: none;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.tab {
+    padding: 2%;
+    border-top: 1px solid slategray;
+    border-right: 1px solid slategray;
+}
+
+.tab:hover {
+    background-color: slategray;
+    color: white;
+    box-shadow: 0 0 10px inset;
+    border: 0px;
+}

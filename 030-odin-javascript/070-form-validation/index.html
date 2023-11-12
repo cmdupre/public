@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <form id="form" novalidate>
+            <label for="email">
+                <span>Email:</span>
+                <input type="email" name="email" id="email" autocomplete="off" required>
+                <span id="email-error" class="error"></span>
+            </label>
+            <label for="country">
+                <span>Country:</span>
+                <input type="text" name="country" id="country" autocomplete="off" required>
+                <span id="country-error" class="error"></span>
+            </label>
+            <label for="zipcode">
+                <span>Zip Code:</span>
+                <input type="text" name="zipcode" id="zipcode" autocomplete="off" minlength="5" maxlength="10" required>
+                <span id="zipcode-error" class="error"></span>
+            </label>
+            <label for="password">
+                <span>Password:</span>
+                <input type="password" name="password" id="password" autocomplete="off" required>
+                <span id="password-error" class="error"></span>
+            </label>
+            <label for="password-confirm">
+                <span>Confirm Password:</span>
+                <input type="password" name="password-confirm" id="password-confirm" autocomplete="off" required>
+                <span id="password-confirm-error" class="error"></span>
+            </label>
+            <label for="submit">
+                <button name="submit" type="submit">Submit</button>
+            </label>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

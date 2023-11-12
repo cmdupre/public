@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+body {
+    font-family: Inter;
+    background-color: aliceblue;
+}
+
+.header {
+    font-size: 2rem;
+    color: steelblue;
+}
+
+.container {
+    margin: auto;
+    padding: 15px;
+    width: 80vw;
+    background-color: white;
+    box-shadow: 0px 0px 5px;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+li {
+    padding: 5px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    padding: 10px;
+    border: 1px solid steelblue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.card .title {
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: bold;
+}
+
+.card .author {
+    grid-column: 1;
+    grid-row: 2;
+    font-style: italic;
+    font-size: .8em;
+}
+
+.card .pages {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: .8em
+}
+
+.card .read {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+    font-size: .8em;
+}
+
+.card .deleteBtn {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    justify-self: end;
+    height: min-content;
+    padding: 1px 5px;
+}
+
+.card:hover {
+    background-color: aliceblue;
+    box-shadow: 0px 0px 5px;
+}
+
+button {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border-color: steelblue;
+    background-color: aliceblue;
+    color: steelblue;
+}
+
+button:hover,
+.deleteBtn:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+form ul {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    column-gap: 5em;
+}
+
+form ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+form ul li label {
+    padding-bottom: 5px;
+}
+
+form input {
+    font-family: Inter;
+    padding: 5px;
+}

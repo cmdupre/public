@@ -1,0 +1,131 @@
+body {
+    background-color: #333333;
+}
+
+* {
+    padding: 5px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    color: #f9faf8;
+    display: flex;
+}
+
+.navbar,
+.hero {
+    background-color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    padding:25px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: #f9faf8;
+}
+
+.hero .main {
+    color: #f9faf8;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero .secondary {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+button,
+.action {
+    background-color: #3882f6;
+}
+
+footer {
+    background-color: #e5e7eb;
+    padding: 50px;
+}
+
+.action {
+    line-height: 0.25;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    color:#f9faf8;
+}
+
+.action .main {
+    font-weight: bold;
+}
+
+.action .secondary {
+    font-size: small;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    color: #f9faf8;
+    border-radius: 10px;
+    border-color: #f9faf8;
+    border-style: solid;
+    padding: 5px 10px;
+}
+
+.random {
+    background-color: #e5e7eb;
+}
+
+.random article {
+    display: flex;
+}
+
+.random .information {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2937;
+    text-align: center;
+}
+
+.quote {
+    background-color: #e5e7eb;
+}
+
+.quote .text {
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.quote .signature {
+    font-weight: bold;
+    text-align: right;
+}
+
+.hero .placeholder {
+    width: 300px;
+    height: 250px;
+}
+
+.placeholder {
+    background-color: gray;
+    color: gray;
+}
+
+.copyright {
+    margin: 10px 0px;
+    font-size: x-small;
+    font-weight: lighter;
+    color: #f9faf8;
+}

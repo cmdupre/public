@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="content">
+        <div id="ships"></div>
+        <div id="ai-gameboard"></div>
+        <div id="player">
+            <form id="new-player-form">
+                <input type="text" id="player-name-input" placeholder="Enter your name..." autocomplete="off">
+                <button type="submit" id="start-new-game-button">Start New Game</button>
+            </form>
+            <div id="dashboard">
+                <div id="player-name"></div>
+                <table id="status-report">
+                    <caption>Status Report</caption>
+                    <tr>
+                        <th>Ship</th>
+                        <th>Health</th>
+                        <th>Enemy Ship</th>
+                        <th>Health</th>
+                    </tr>
+                    <tr>
+                        <td>Carrier</td>
+                        <td id="ship-5-health">Health</td>
+                        <td>Carrier</td>
+                        <td id="ai-ship-5-health">Health</td>
+                    </tr>
+                    <tr>
+                        <td>Cruiser</td>
+                        <td id="ship-4-health">Health</td>
+                        <td>Cruiser</td>
+                        <td id="ai-ship-4-health">Health</td>
+                    </tr>
+                    <tr>
+                        <td>Destroyer</td>
+                        <td id="ship-3-health">Health</td>
+                        <td>Destroyer</td>
+                        <td id="ai-ship-3-health">Health</td>
+                    </tr>
+                    <tr>
+                        <td>Frigate</td>
+                        <td id="ship-2-health">Health</td>
+                        <td>Frigate</td>
+                        <td id="ai-ship-2-health">Health</td>
+                    </tr>
+                    <tr>
+                        <td>Sub</td>
+                        <td id="ship-1-health">Health</td>
+                        <td>Sub</td>
+                        <td id="ai-ship-1-health">Health</td>
+                    </tr>
+                </table>
+                <div id="change-name"></div>
+            </div>
+        </div>
+        <div id="gameboard"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

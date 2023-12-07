@@ -1,0 +1,119 @@
+:root {
+    --seablue: rgb(00, 69, 94);
+}
+
+body {
+    background-color: var(--seablue);
+}
+
+.hidden {
+    display: none;
+}
+
+#content {
+    width: min-content;
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    background-color: seashell;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+}
+
+form * {
+    padding: 3px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+#new-player-form,
+#dashboard {
+    grid-column: 2;
+}
+
+#gameboard {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#ai-gameboard,
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1px;
+    height: min-content;
+}
+
+#ai-gameboard {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+}
+
+#ai-gameboard span:first-child {
+    grid-column: 1 / 11;
+    justify-self: center;
+}
+
+.ai-cell {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 21px;
+}
+
+.ai-cell,
+.cell {
+    margin: 0px;
+    border: 1px solid black;
+}
+
+.ai-cell.hit,
+.cell.hit {
+    background-color: red;
+}
+
+table caption {
+    font-style: italic;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    padding-left: 5px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    border-left: 1px solid black;
+    text-align: right;
+}
+
+th:first-child,
+td:first-child {
+    text-align: right;
+}
+
+td.sunk {
+    color: red;
+    font-weight: bold;
+}

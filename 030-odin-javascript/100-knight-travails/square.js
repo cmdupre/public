@@ -1,7 +1,7 @@
 import position from './position.js'
 
-function getValidMoves(relativePositions, currentPosition) {
-    const validMoves = [];
+function getNeighbors(currentPosition, relativePositions) {
+    const neighbors = [];
 
     for (const relPos of relativePositions) {
         const newPos = position.create(
@@ -12,14 +12,14 @@ function getValidMoves(relativePositions, currentPosition) {
             (newPos.y < 0 || newPos.y > 7))
             continue;
 
-        validMoves.push(newPos);
+        neighbors.push(newPos);
     }
 
-    return validMoves;
+    return neighbors;
 }
 
 export default (() => {
     return {
-        getValidMoves,
+        getNeighbors,
     }
 })();

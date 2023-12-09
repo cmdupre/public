@@ -1,48 +1,38 @@
 import square from "./square.js";
+import edge from "./edges.js";
 
-function getMoves(piece, currentPosition, targetPosition) {
+function knightMoves(piece, currentPosition, targetPosition) {
     if (currentPosition.equals(targetPosition))
-        return [targetPosition];
+        return [];
 
-    const result = search(piece, currentPosition, targetPosition, []);
-
-    return [currentPosition, ...result];
-}
-
-function search(piece, currentPosition, targetPosition, exploredList) {
-    if (currentPosition.equals(targetPosition))
-        return [targetPosition];
-
-    const frontier = square
-        .getValidMoves(piece, currentPosition)
-        .filter(move => !includes(exploredList, move));
-
-    exploredList = [...frontier, ...exploredList];
-
-    const possiblePaths = [];
-
+    const frontier = [currentPosition];
+    const visited = [];
+    const edges = [];
     while (frontier.length > 0) {
-        // DFS due to stack array
-        const exploreSquare = frontier.pop();
-        const path = search(piece, exploreSquare, targetPosition, exploredList);
-        if (path.length > 0) {
-            if (path[0] === targetPosition)
-                possiblePaths.push([exploreSquare]);
-            else
-                possiblePaths.push([exploreSquare, ...path]);
+        let node = frontier.shift();
+        visited.push(node);
+        for (let neighbor of square.getNeighbors(node, piece)) {
+            if (visited.findIndex(v => v.equals(neighbor)) > -1)
+                continue;
+            edges.push(edge.create(node, neighbor));
+            if (neighbor.equals(targetPosition))
+                return getVertices(neighbor, edges);
+            frontier.push(neighbor);
         }
     }
 
-    return possiblePaths.length < 1
-        ? []
-        : possiblePaths.toSorted((a, b) => a.length - b.length)[0];
+    return [];
 }
 
-function includes(list, value) {
-    for (const item of list)
-        if (item.equals(value))
-            return true;
-    return false;
+function getVertices(node, edges) {
+    let vertices = [node];
+    while (true) {
+        let edge = edges.find(e => e.node.equals(node));
+        if (edge === undefined)
+            return vertices;
+        vertices = [edge.parent, ...vertices];
+        node = edge.parent;
+    }
 }
 
-export default getMoves
+export default knightMoves

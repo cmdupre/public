@@ -1,13 +1,15 @@
 import position from './position.js';
 import piece from './piece.js';
-import getMoves from './board.js';
+import knightMoves from './board.js';
 
-const moves = getMoves(
+const moves = knightMoves(
     piece.knight,
     position.create(3, 3),
     position.create(4, 3),
 );
 
-console.log(`You made it in ${moves.length - 1} moves! Here's your path:`)
-for (const move of moves)
-    console.log(`    ${move.toString()}`);
+if (moves.length > 0) {
+    console.log(`You made it in ${moves.length - 1} moves! Here's your path:`)
+    for (const move of moves)
+        console.log(`    ${move.toString()}`);
+}

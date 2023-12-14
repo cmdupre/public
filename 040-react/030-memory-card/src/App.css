@@ -1,0 +1,30 @@
+#root {
+    max-width: 800px;
+    margin: auto;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.score,
+.best-score {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    width: 100px;
+}
+
+.card img {
+    max-width: 100%;
+}

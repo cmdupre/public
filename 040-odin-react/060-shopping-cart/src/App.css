@@ -1,0 +1,111 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+#navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: steelblue;
+  color: white;
+}
+
+#navigation .menu a {
+  background-color: steelblue;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+#navigation .menu a:hover {
+  box-shadow: 0 0 5px inset;
+}
+
+#home {
+  padding: 10px;
+  text-align: center;
+}
+
+#home .logo {
+  width: 100px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: block;
+  transition: 300ms;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #home .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+#home,
+#shop,
+#checkout {
+  margin-top: 20px;
+}
+
+#shop .items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#shop .item {
+  box-shadow: 0 0 5px steelblue;
+  padding: 10px;
+}
+
+#shop .item img {
+  width: 100px;
+}
+
+#shop input.qty {
+  width: 3ch;
+}
+
+input,
+button {
+  padding: 5px;
+}
+
+.minus,
+.plus {
+  width: 3ch;
+}
+
+.quantity {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+#checkout table {
+  width: 100%;
+  border-spacing: 20px 0px;
+}
+
+th:first-child,
+td:first-child {
+  text-align: right;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  text-align: left;
+}

@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # Jest
 coverage/
+
+# Environment
+.env
